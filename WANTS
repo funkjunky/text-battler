@@ -1,0 +1,25 @@
+# WANTS
+## Things I want from this playground repo
+
+ - stats and interactions w those stats
+ - interactions with two groups fighting
+
+ - character progression... somehow?? [cant do with just a script]
+
+ Spice:
+ - If one char attacks another, they are engaged, and the other must retaliate
+  - some characters will be able to disengage to choose their own target, as a special ability, Perhaps afte a set number of attacks?
+ - abilities trigger based on criteria... ie. engaged with unfavorable enemy, after one attack, will use "disengage" if it has never been used
+  - abilities should probably mostly be single use per battle. Except special cases for very special "classes" whos main purpose is to do abilities repeatedly
+ - front row is targeted before back row
+  - AoE is an exception.
+  - some units can only attack from the front row
+  - Limited spots on front row (Perhaps 3)
+    - OR it depends on the environment! [open field could be unlimited, gully could be 4, hallway could be 1!]
+  - some abilities or units will attack through other units, like a ninja attacks in a line hitting a front, then a back and focusing on the most injured front.
+
+
+
+# Ideas
+
+ - perhaps enmity and agro... and brawls where everyeone fights each other?? or multiple teams fighting??

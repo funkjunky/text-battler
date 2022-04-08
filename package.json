@@ -1,0 +1,16 @@
+{
+  "name": "high-descent-clone",
+  "version": "1.0.0",
+  "description": "lambda based rpg",
+  "main": "game/scenario-first.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node game/scenario-first.js"
+  },
+  "type": "module",
+  "author": "Sophie",
+  "license": "ISC",
+  "dependencies": {
+    "immer": "^9.0.12"
+  }
+}

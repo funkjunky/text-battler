@@ -1,0 +1,17 @@
+### TODO ###
+
+ - Create an interaction script for two teams fighting each other [maybe just randomly hit another random person]
+   - Add engage mechanic, so if one char attacks anther, the other must then continue to fight that one.
+  (rather than all chars randomly hitting each other)
+ - Create a scenario to do the two teams
+
+ ?? hmmmm progression???
+
+
+
+## DONE ##
+
+ - Create folder structure [data => (characters), scripts => interactions, scenarios in base folder]
+ - Create two characters in data/characters
+ - Create a script for two characters fighting in interactions
+ - Create a scenario that imports and calls the fight interaction with the two characters
