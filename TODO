@@ -1,11 +1,17 @@
 ### TODO ###
 
- - Create an interaction script for two teams fighting each other [maybe just randomly hit another random person]
-   - Add engage mechanic, so if one char attacks anther, the other must then continue to fight that one.
-  (rather than all chars randomly hitting each other)
- - Create a scenario to do the two teams
-
  ?? hmmmm progression???
+ Answer: good! Now I want to add more interesting engage mechanics... as well as add a "cancel" type
+
+ - cancel requires status for characters... so, maybe add it as an array of possible statuses	
+	{ recentlyCrit: (tick) => if 5 ticks have passed, then return false } // used to cancel attac
+	- a status is a function that returns true if still applicable, false if not
+	- also it takes the person and the current tick. Also when created, it stores the tick it was created, for reference, usually to know when to expire.
+
+   - Add engage mechanic, so if one char attacks anther, the other must then continue to fight that one
+	- `engaged` field on person. If attacked, then set this. If set, then use, instead of `chooseTarget`
+	- thief should target weakest enemy [ill need to add a weaker knight to test]
+		- hmmm classes have an optional `chooseTarget` function, default is random function i already made.
 
 
 
@@ -15,3 +21,6 @@
  - Create two characters in data/characters
  - Create a script for two characters fighting in interactions
  - Create a scenario that imports and calls the fight interaction with the two characters
+ - Create an interaction script for two teams fighting each other [maybe just randomly hit another random person]
+  (rather than all chars randomly hitting each other)
+ - Create a scenario to do the two teams
