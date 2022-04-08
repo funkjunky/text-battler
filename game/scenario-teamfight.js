@@ -43,12 +43,10 @@ console.log('Group Battle - version 1 - April 7th, 2022');
 logGroupStatus(rebels);
 logGroupStatus(soldiers);
 
-console.log('...');
-console.log('then they fight!!!!');
-console.log('...');
+report()('then they fight!!!!');
 
 const result = twoGroupsBattle({rebels, soldiers}, report());
 
-console.log('After the fight, the status of the two groups:');
+report()('After the fight, the status of the two groups:');
 logGroupStatus(result.rebels);
 logGroupStatus(result.soldiers);
