@@ -15,7 +15,7 @@ const chooseRandomTarget = (possibleTargets) =>
 //cloned from scenario teambattle
 const hasFainted = ({ hp }) => hp <= 0;
 
-export default (groups, log, duration = 100) => produce(groups, groups => {
+export default (groups, log, duration = 50) => produce(groups, groups => {
   // TODO: this is too many loops, I should break this up into functions
   for(let ticksPassed=1; ticksPassed <= duration; ++ticksPassed) {
     Object.values(groups).forEach(({ members }) =>
