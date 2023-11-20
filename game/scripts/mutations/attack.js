@@ -8,7 +8,7 @@ export const AttackResultType = {
 
 export const logAttack = ({ attacker, defender, type, dmg }, log = console.log) => {
   log(type(attacker, defender, dmg));
-  if (dmg && defender.hp - dmg <= 0) log('~~' + defender.name + ' HAS FAINED!!');
+  if (dmg && defender.hp <= 0) log('~~' + defender.name + ' HAS FAINTED!!');
 };
 
 export const attack = (attacker, defender) => {
