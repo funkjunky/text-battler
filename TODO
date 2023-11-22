@@ -1,12 +1,18 @@
 ### TODO ###
 
-#Cancel
- - cancel requires status for characters... so, maybe add it as an array of possible statuses	
-	{ recentlyCrit: (tick) => if 5 ticks have passed, then return false } // used to cancel attac
-	- a status is a function that returns true if still applicable, false if not
-	- also it takes the person and the current tick. Also when created, it stores the tick it was created, for reference, usually to know when to expire.
+# Web - first draft w api
+  - Research: how to create a restful CRUD database api quickly
+  - adapt code to use github pages.
+  - For now, just spit out the results on the webpage in a code block
+  - create an api for my game that has dummy data to grab
+  - award `exp` to characters, and keep adding it, every reload. [as a POC]
 
-#Web - I'll need a database setup, with cloudflare???? where do i store data and how do i access it?
+# I'd love to add keywords to my TODOs list ie.Research
+# clean up code, address TODOs
+
+# Web 2.0 - build team by adding classes and giving names, create enemy groups, fight enemy groups, gain exp, record results
+
+# Make a game out of this???? currency? leveling up? Add dummy players? PRIMARY GAME PLAY LOOP!!
 
 #Engage
    - Add engage mechanic, so if one char attacks anther, the other must then continue to fight that one
@@ -30,3 +36,4 @@
  - Create a scenario to do the two teams (lies! Wasn't complete)
  - get group v group working
  - cleaner implementation of priority for thief
+ - Added cancelling when crit within 5 ticks

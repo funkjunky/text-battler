@@ -4,7 +4,9 @@ export const AttackResultType = {
   hit:  (attacker, defender, dmg) => `${attacker.name} hit ${defender.name} for ${dmg} dmg (${defender.name} hp:${defender.hp})`,
   miss: (attacker, defender) => `${attacker.name} ~missed~ ${defender.name}`,
 }
-// TODO: idea! also add cancelling if crit 1 or 2 ticks before attack!
+
+// Prototype This is to tell another function to replace the value with the current tick.
+const FILL_IN_TICK = 'FILL_IN_TICK';
 
 export const logAttack = ({ attacker, defender, type, dmg }, log = console.log) => {
   log(type(attacker, defender, dmg));
@@ -17,6 +19,7 @@ export const attack = (attacker, defender) => {
   if (doesAttackerCrit(attacker, defender))  {
     const dmg = attacker.str * 2;
     defender.hp -= dmg;
+    defender.tickLastHitByCrit = FILL_IN_TICK;
     // TODO: return type seems wordy.... can i make it nicer?
     return { ...result, type: AttackResultType.crit, dmg };
   }

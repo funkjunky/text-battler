@@ -18,13 +18,23 @@ export default (groups, log, duration = 70) => produce(groups, groups => {
   for(let ticksPassed=1; ticksPassed <= duration; ++ticksPassed) {
     Object.values(groups).forEach(({ members }) => {
       members.forEach(person => {
-        if(!hasFainted(person) && isTickToAttack(ticksPassed, person)) {
+        if(hasFainted(person)) return;
+
+        if(isTickToAttack(ticksPassed, person)) {
+          if(ticksPassed - person.tickLastHitByCrit < 5) {
+            log(`* ${person.name} attack was cancelled *`);
+            return;
+          }
+
           const enemies = possibleTargets(members, groups);
           const target = person.chooseTarget?.(enemies) ?? defaultChooseTarget(enemies);
           logAttack(attack(person, target), log);
+          // TODO: feels out of place...
+          if (target.tickLastHitByCrit === 'FILL_IN_TICK') { //TODO: use const in attack.js
+            target.tickLastHitByCrit = ticksPassed;
+          }
         }
       })
-    }
-    );
+    });
   }
 });
